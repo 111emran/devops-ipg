@@ -22,9 +22,9 @@ terraform init
 
 terraform plan
 
-terraform apply
+terraform apply -auto-approve
 
-and type yes and enter when prompt comes
+
 
 iii. After running the terraform successfully, wait a little while (5+ minutes). Because to up docker containers, to active LB, to add ec2 to TG, startup script to run.
 
