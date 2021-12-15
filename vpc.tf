@@ -7,9 +7,6 @@ provider "aws" {
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 
-  tags = {
-    Name = "devops-test-vpc"
- }
 }
 
 
@@ -36,9 +33,6 @@ resource "aws_subnet" "public_subnet_01" {
 resource "aws_internet_gateway" "devops-igw" {
   vpc_id = aws_vpc.main.id
 
-  tags = {
-    Name = "internet gateway"
- }
 }
 
 
