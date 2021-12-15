@@ -34,8 +34,7 @@ RUN useradd -u 1000 -ms /bin/bash -g www www
 COPY ./app /var/www/
 
 # import your packages and create the vendor folder
-RUN composer install
-RUN composer update
+RUN composer install --ignore-platform-reqs
 
 # Copy existing application directory permissions
 RUN chown www:www /var/www
