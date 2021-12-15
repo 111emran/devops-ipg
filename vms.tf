@@ -23,10 +23,6 @@ resource "aws_instance" "jumpbox" {
   availability_zone = "ap-southeast-1a"
   key_name = aws_key_pair.generated_key.key_name
 
-    tags = {
-    Name = "Jumpbox"
-  }
-
 }
 
 resource "aws_instance" "ubuntu" {
@@ -39,9 +35,6 @@ resource "aws_instance" "ubuntu" {
   key_name = aws_key_pair.generated_key.key_name
   user_data = file("./env_readiness.sh")
 
-    tags = {
-    Name = "Web-Server"
-  }
 
 }
 
