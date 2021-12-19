@@ -6,7 +6,7 @@ sudo apt-get install git -y
 cd /home/ubuntu
 sudo git clone https://github.com/111emran/devops-ipg.git
 #Give user permission to the code directory for executional purpose
-sudo chown -R ubuntu:ubuntu DevOps-Challenge
+sudo chown -R ubuntu:ubuntu devops-ipg
 #install dependencies i.e curl, php7.4 and composer 
 sudo apt-get update
 sudo apt install curl -y
@@ -19,7 +19,7 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
 #install laravel project dependencies and build the project
-cd /home/ubuntu/DevOps-Challenge/app/
+cd /home/ubuntu/devops-ipg/app/
 composer install
 composer update
 php artisan key:generate
@@ -46,5 +46,5 @@ sudo docker run hello-world
 #Preparing to containerized the application in docker container
 sudo usermod -aG docker ubuntu 
 sudo service apache2 stop -y
-cd /home/ubuntu/DevOps-Challenge/
+cd /home/ubuntu/devops-ipg/
 sudo docker-compose up -d --build
